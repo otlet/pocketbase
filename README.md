@@ -14,7 +14,8 @@
 **For documentation and examples, please visit <https://pocketbase.io/docs>.**
 
 > [!WARNING]
-> This repository only contains the Docker files
+> This repository only contains the Docker files and it's boilerplate for your own PocketBase based application.
+> If you want to use PocketBase, please visit <https://pocketbase.io> and follow the instructions there.
 
 ### Installation
 
