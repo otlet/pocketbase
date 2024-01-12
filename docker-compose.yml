@@ -3,7 +3,7 @@ version: "3.9"
 services:
   app:
     build: .
-    image: pb:latest
+    image: ghcr.io/otlet/pocketbase:latest
     ports:
       - "8090:8090"
     volumes:
