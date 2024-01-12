@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    image: pb:latest
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./data:/usr/local/lib/pb/data
+      - ./migration:/usr/local/lib/pb/migration
+      - ./public:/usr/local/lib/pb/public

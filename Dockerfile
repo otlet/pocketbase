@@ -1,8 +1,8 @@
+FROM alpine:3.19.0 as downloader
+
 ARG VERSION=0.20.5
 ARG PLATFORM=linux
 ARG ARCHITECTURE=amd64
-
-FROM alpine:3.19.0 as downloader
 
 RUN apk add --no-cache \
     unzip \
@@ -18,4 +18,4 @@ COPY --from=downloader /pb/pocketbase /usr/local/bin/pocketbase
 
 EXPOSE 8080
 
-CMD ["/usr/local/bin/pocketbase", "serve", "--http=0.0.0.0:8080"]
+CMD ["/usr/local/bin/pocketbase", "serve", "--publicDir=/usr/local/lib/pb/public", "--migrationsDir=/usr/local/lib/pb/migration", "--dir=/usr/local/lib/pb/data", "--http=0.0.0.0:8090"]
